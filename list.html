@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Kitchen</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    
+    <body id="list-view">
+
+        <div class="contain">
+            <a href="index.html" class="logo">
+                <h1>Kitchen</h1>
+            </a>
+        </div>
+
+        <nav>
+         
+            <ul class="contain">
+                <li><a href="#">Women&rsquo;s</a></li>
+                <li><a href="#">Bath</a></li>
+                <li><a href="#">Men&rsquo;s</a></li>
+                <li><a href="#">Kitchen</a></li>
+            </ul>
+        </nav>
+        
+        <div id="main" role="main" class="contain clearfix">
+        
+            <section id="content">
+                <ol class="product-list">
+                    <li>
+                        <a>
+                            <img src="images/table_1.png" alt="big sir dining table" />
+                            <h2>Big Sir Dining Table</h2>
+                            <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a>
+                            <img src="images/table_2.png" alt="basque honey" />
+                            <h2>Big Sir Dining Table</h2>
+                            <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>
+                    </li>     
+                    <li>
+                        <a>    
+                            <img src="images/table_3.png" alt="cucina" />
+                            <h2>Big Sir Dining Table</h2>
+                           <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>    
+                            <img src="images/table_4.png" alt="arlington" />
+                            <h2>Big Sir Dining Table</h2>
+                           <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/table_5.png" alt="pacifica" />
+                            <h2>Big Sir Dining Table</h2>
+                            <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>
+                    </li>
+                    <li>    
+                        <a>
+                            <img src="images/table_6.png" alt="sideboard" />
+                            <h2>Big Sir Dining Table</h2>
+                            <span class="button">Quick view</span>
+                            <p>$1488</p>
+                        </a>   
+                    </li>
+                </ol>
+                
+                <div id="quickview">
+                    
+                    <img src="img/modal_image.png" alt="modal" />
+                    
+                    <h2>Big Sir Dining Table</h2>
+                    
+                    <p class="desc">Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.</p>
+                    
+                    <ul class=description>
+                        <li>65" x 37.5" x 30"</li>
+                        <li>Solid white oak</li>
+                        <li>Seats up to six</li>
+                        <li>Made in Poland</li>
+                    </ul>
+                    
+                    <p class="price">$1499</p>
+                    
+                    
+                    <form action="" method="post">
+                        <input type="hidden" name="sku" value="1917839" />
+                        <input type="submit" value="Add to Cart" />
+                    </form>
+                    
+                    
+                    
+                </div><!--quickview -->
+          
+            </section><!-- #content_images -->
+             
+             <aside id="sidebar">
+                <h2>Related Content</h2>
+                
+                <h3>Search</h3>
+                <form id="search" action="/" method="post">
+                <input type="text" name="term" />
+                <input type="submit" value="search" />
+            </form><!-- #search -->
+            
+            <nav>
+                <h1>Kitchen</h1>
+                    <ul role="navigation">
+                        <li><a href="#">Dining Tables &amp; Chairs</a><li>
+                        <li><a href="#">Must Have Appliances</a><li>
+                        <li><a href="#">Plates, Bowls, &amp; Glasses</a><li>
+                        <li><a href="#">Tableware &amp; Accoutrement</a><li>
+                    </ul>
+            </nav>
+        
+        </aside><!-- sidebar -->
+        
+    </div><!-- #main -->
+        
+    <footer>
+      <div class="contain">
+        <a href="#" class="logo">
+          <p>Messina</p>
+          <p>Statements of Fashion</p>
+        </a>
+        
+        <ul role="navigation">
+          <li><a href="#">Follow us on Twitter</a></li>
+          <li><a href="#">Like us on Facebook</a></li>
+        </ul>
+        
+        <ul role="navigation">
+          <li><a href="#">Philosophy</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        
+        <ul role="navigation">
+          <li><a href="#">hello@mesina.com</a></li>
+          <li>800.555.1234</li>
+        </ul>
+        
+      </div>
+    </footer>
+                
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        
+        <script>
+        
+            $('.product-list a').click(function(event) { // anonymous function passed as argument
+            
+                if (event.target.tagName == "SPAN"){
+                    
+                    var pos = $(this).parent().position();
+                    
+                    var left = pos.left+240;
+                    
+                    $('#quickview').removeClass("right");
+                    
+                    if (left > 480) {
+                    left = 0;
+                    $('#quickview').addClass("right");
+                    }
+            
+                $('#quickview').css({"left": left + "px", "top":pos.top+"px"}).fadeIn(1000);
+                return false; // do not follow default behavior
+                
+                }
+            
+            });
+            
+            $('#quickview').mouseleave(function () {
+                
+               $(this).fadeOut(1000);
+               
+            });    
+        
+        </script>
+        
+       </body>
+    
+</html>
+    
