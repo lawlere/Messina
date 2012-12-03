@@ -27,31 +27,20 @@
     <div id="main" role="main" class="contain clearfix">
         
         <section id="content">
-            
-            <section id="pig_picture">
-            
-                <figure>
-                    <img src="img/products_details/Table1_big_03.png" alt="Table 1">
-                </figure>
-                
-                <img src="img/products_details/messina-detail_2.png" alt="Big Sir Dining Table">
-                <img src="img/products_details/messina-detail_3.png" alt="Big Sir Dining Table">
-                <img src="img/products_details/messina-detail_4.png" alt="Big Sir Dining Table">
-                <img src="img/products_details/messina-detail_5.png" alt="Big Sir Dining Table">
-                <img src="img/products_details/messina-detail_6.png" alt="Big Sir Dining Table">
-                
-            </section>        
-            
-            <div>
+        
+        <div id="details">
                 <h1>Big Sir Dining Table</h1>
-                <p>Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.</p>
+                <p id="description">Like its namesake, this casual, contemporary dining group is big, bold and natural. The rustic beauty of Big Sur lies in its solid European white oak with naturally occurring splits, cracks and knots.</p>
+                
+                <p id="price_detail">$1499</p>
+                
                 <ul>
                     <li>65" x 37.5" x 30</li>
                     <li>Solid white oak</li>
                     <li>Seats up to six</li>
                     <li>Made in Poland</li>
                 </ul>
-                <p id="price_detail">$1499</p>
+                
                 
                 <select>
                     <option value="Natural Hickory">Natural Hickory</option>
@@ -60,12 +49,42 @@
                     <option value="Natural Hickory">Natural Hickory</option>
                 </select>
                 
-                <form action="" method="post">
+                <form id="add" action="" method="post">
                     <input type="hidden" name="sku" value="1917839" />
                     <input type="submit" value="Add to Cart" />
                 </form>
-          
+            </div><!-- #details -->
+                
+            
+            <section id="big_pic">
+           
+                <figure id="main_pic">
+                    <img id="currentImg" src="img/products_details/Table1_big_03.png" alt="big_table">
+                </figure>
+                
+                <section id="small_pics">
+                    <img src="img/products_details/messina-detail_2.png" alt="Big Sir Dining Table" data-large="img/replacements/replacement_1.png"/>
+                    <img src="img/products_details/messina-detail_3.png" alt="Big Sir Dining Table" data-large="img/replacements/replacement_5.png"/>
+                    <img src="img/products_details/messina-detail_4.png" alt="Big Sir Dining Table" data-large="img/replacements/replacement_4.png"/>
+                    <img src="img/products_details/messina-detail_5.png" alt="Big Sir Dining Table" data-large="img/replacements/replacement_3.png"/>
+                    <img src="img/products_details/messina-detail_6.png" alt="Big Sir Dining Table" data-large="img/replacements/replacement_2.png"/>
+                </section>
+            </section>
+            
+            <section id="medium_pics">
+        
+                <ol>
+                    <li><img src="img/products_details/messina-medium1.png" alt="Big Sir Dining Table"></li>
+                    <li><img src="img/products_details/messina-medium2.png" alt="Big Sir Dining Table"></li>
+                    <li><img src="img/products_details/messina-medium3.png" alt="Big Sir Dining Table"></li>
+                    <li><img src="img/products_details/messina-medium4.png" alt="Big Sir Dining Table"></li>
+                </ol>
+                
+            </section>
+        
         </section><!-- #content_images -->
+            
+           
              
              <aside id="sidebar">
                 <h2>Related Content</h2>
@@ -87,8 +106,10 @@
                 </nav>
         
             </aside><!-- sidebar -->
-        
-    </div><!-- #main -->
+   
+   </div><!-- #main -->
+   
+
         
     <footer>
       <div class="contain">
@@ -110,12 +131,25 @@
         </ul>
         
         <ul role="navigation">
-          <li><a href="#">hello@mesina.com</a></li>
+          <li><a href="#">hello@messina.com</a></li>
           <li>800.555.1234</li>
         </ul>
         
       </div>
     </footer>
+    
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        
+        <script>
+        (
+            function () {
+                $('#small_pics img').click(function(){
+                    var large=$(this).data("large");
+                    $("#currentImg").attr("src", large);
+                });
+            })()
+        
+        </script>
         
        </body>
     

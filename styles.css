@@ -448,6 +448,97 @@ body > footer ul {
     padding-top:3px;
 }
 
+/* details */
+
+
+#big_pic {
+    width:380px;
+    padding:0;
+    float:left;
+    display:block;
+    position:relative;
+    margin-left:-80px;
+}
+#small_pics {
+    margin-left:50px;
+}
+
+#small_pics img {
+    margin-right:2px;
+}
+    
+
+#details {
+    display:block;
+    width:299px;
+    position:relative;
+    float:right;
+}
+
+
+#medium_pics {
+    width:960px;
+    display:inline-block;
+}
+
+#medium_pics ol li {
+    list-style-type:none;
+    display:inline;
+    position:relative;
+}
+
+#details #description {
+    color:#aaa9ba;
+    font-family:junction;
+    font-size:14px;
+}
+
+#details ul {
+    margin-left:-40px;
+}
+
+#details ul li {
+    list-style-type:none;
+    color:#dcdcdc;
+    font-size:14px;
+}
+
+#price_detail {
+    color:#000000;
+    float:right;
+    font-family:junction;
+}
+
+#details #add {
+    float:right;
+}
+
+#add input {
+  height:30px;
+  border:solid 1px #d8e3e8;
+  background:#fff;
+  padding:0;
+  box-sizing:border-box;
+  margin-top:-22px;
+}
+
+#add input[type=submit] {
+  color:#90989b;
+  font-family:junction;
+  font-size:75%;
+  width:125px;
+  text-transform:uppercase;
+  float:right;
+}
+
+#replacements {
+    display:none;
+}
+
+
+    
+
+
 
 
 
